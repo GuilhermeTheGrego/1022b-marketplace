@@ -28,7 +28,7 @@ app.get("/produtos",async(req,res)=>{
         })
         //PASSO 3: QUERY  -> SELECT * FROM produtos
         const [result,fields] = await conexao.query("select * from produtos")
-        
+        await conexao.end()
         //PASSO 4: Colocar os dados do banco no response
         res.send(result)
     }catch(e){

@@ -1,22 +1,26 @@
-DROP DATABASE IF EXISTS banco1022b;
-CREATE DATABASE banco1022b;
-USE banco1022b;
-CREATE TABLE IF NOT EXISTS produtos(
-	id BIGINT PRIMARY KEY AUTO_INCREMENT,
+DROP DATABASE IF EXISTS defaultdb;
+CREATE DATABASE defaultdb;
+USE defaultdb;
+
+CREATE TABLE IF NOT EXISTS produtos (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
     descricao VARCHAR(50),
     preco DECIMAL(10,2),
     imagem VARCHAR(300)
 );
-create table usuarios(
-id int primary key,
-nome varchar(200),
-email varchar(100),
-create_at timestamp,
-update_at timestamp
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(200) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-INSERT INTO produtos VALUES
-(1,"Iphone","Celular RUIM",5000.50,"SEM IMAGEM");
-insert into usuarios VALUES
-();
+INSERT INTO produtos (nome, descricao, preco, imagem) VALUES
+("Iphone", "Celular RUIM", 5000.50, "SEM IMAGEM");
+
+-- Exemplo de inserção de usuários
+INSERT INTO usuarios VALUES
+(1,'guilherme','gui.souza11@gmail.com','2024-10-22 10:00:00','2024-10-22 10:00:00')

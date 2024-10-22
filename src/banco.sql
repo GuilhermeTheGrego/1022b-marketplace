@@ -14,8 +14,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(200) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    created_at TIMESTAMP DEFAULT,
-    updated_at TIMESTAMP DEFAULT 
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP 
 );
 
 INSERT INTO produtos (nome, descricao, preco, imagem) VALUES

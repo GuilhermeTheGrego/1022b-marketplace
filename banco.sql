@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS produtos (
     imagem VARCHAR(300)
 );
 
+/*Criamos uma tabela para usuarios*/
 CREATE TABLE IF NOT EXISTS usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(200) NOT NULL,
@@ -23,4 +24,4 @@ INSERT INTO produtos (nome, descricao, preco, imagem) VALUES
 
 -- Exemplo de inserção de usuários
 INSERT INTO usuarios VALUES
-(1,'guilherme','gui.souza11@gmail.com','2024-10-22 10:00:00','2024-10-22 10:00:00')
+(1,'guilherme','gui.souza11@gmail.com','2024-10-23 10:00:00','2024-11-22 10:00:00')

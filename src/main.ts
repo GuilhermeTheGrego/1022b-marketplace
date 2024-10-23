@@ -27,7 +27,7 @@ app.get("/produtos", async (req, res) => {
     }
 });
 
-// Rota para listar usuários
+//Criamos uma rota para listar usuário e criar a conexão com banco
 app.get("/usuarios", async (req, res) => {
     try {
         const conexao = await mysql.createConnection({

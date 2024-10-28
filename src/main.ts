@@ -16,8 +16,9 @@ app.get("/produtos", async (req, res) => {
             database: process.env.dbname ? process.env.dbname : "banco1022b",
             port: process.env.dbport ? parseInt(process.env.dbport) : 3306
         });
-
-        const [result] = await conexao.query("SELECT * FROM produtos");
+        const {id, nome,descricao, preco, imagem} = req.body
+        const [result,fields] =
+        await conexao.query("SELECT * FROM produtos");
         await conexao.end();
 
         res.send(result);
@@ -49,6 +50,7 @@ app.get("/usuarios", async (req, res) => {
 });
 
 // Iniciar o servidor
+
 app.listen(8000, () => {
     console.log("SERVIDOR INICIADO NA PORTA 8000");
 });

@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS defaultdb;
 CREATE DATABASE defaultdb;
-
+USE defaultdb;
 
 CREATE TABLE IF NOT EXISTS produtos (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -18,6 +18,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
     created_at TIMESTAMP,
     updated_at TIMESTAMP
 );
-USE defaultdb;
+
 INSERT INTO usuarios VALUES
-(1,'guilherme','gui.souza11@gmail.com','2024-10-23 10:00:00','2024-11-22 10:00:00')
+(1,'guilherme','gui.souza11@gmail.com','2024-10-23 10:00:00','2024-11-22 10:00:00');

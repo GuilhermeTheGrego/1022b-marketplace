@@ -19,6 +19,6 @@ CREATE TABLE IF NOT EXISTS usuarios (
 );
 
 INSERT INTO produtos VALUES
-(1,"Iphone", "Celular RUIM", 5000.50, "SEM IMAGEM");
+(1,"Iphone", "Celular RUIM", 5000.50, "https://http2.mlstatic.com/D_Q_NP_896424-MLA71783367608_092023-O.webp");
 INSERT INTO usuarios VALUES
 (1,'guilherme','gui.souza11@gmail.com','2024-10-23 10:00:00','2024-11-22 10:00:00');

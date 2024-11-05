@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS produtos (
     nome VARCHAR(50),
     descricao VARCHAR(50),
     preco DECIMAL(10,2),
-    imagem VARCHAR(2000)
+    imagem VARCHAR(300)
 );
 
 CREATE TABLE IF NOT EXISTS usuarios (
